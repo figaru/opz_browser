@@ -14,10 +14,15 @@ app.on('ready', function() {
   mainWindow.openDevTools();
 
 
-  ipcMain.on('synchronous-message', (event, arg) => {
-    app.quit();
-    console.log(arg)  // prints "ping"
-    event.returnValue = 'pong'
+  ipcMain.on('frame-action', (event, arg) => {
+	if(arg == "max"){
+  		mainWindow.maximize();
+    }else if(arg == "min"){
+    	mainWindow.minimize()
+    }else if(arg == "close"){
+    	app.quit();
+  	}
+
   });
 });
 

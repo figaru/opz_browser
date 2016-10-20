@@ -5,12 +5,39 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	z-index: 200;
 }#browser-frame .frame-tabs{
 	width: calc(100% - 180px);
 	height: 35px;
 	position: relative;
 	float: left;
-}#browser-frame .frame-actions{
+}.frame-tabs .tab{
+	width: 200px;
+	height: 35px;
+	float: left;
+	background-color: #f6f6f6;
+}.tab .icon{
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	display: block;
+}.icon img{
+	width: 100%;
+	height: 100%;
+}.tab .title{
+	width: 165px;
+	height: 35px;
+	float: left;
+	position: relative;
+	display: block;
+}
+
+
+/*----------------------- FRAME ACTIONS----------------------*/
+#browser-frame .frame-actions{
 	width: 180px;
 	height: 35px;
 	position: relative;
@@ -47,9 +74,11 @@
 	height: 35px;
 	background-color: #f6f6f6;
 	position: absolute;
+	z-index: 100;
 	top: 35px;
 	left: 0px;
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 0px 1px 3px #c9c9c9;
 }#browser-actions button{
 	height: 35px;
 	padding: 0px 5px;
@@ -73,25 +102,32 @@
   
 }
 #browser-actions input#location{
-	width: auto;
-	height: 31px;
-	border: 0;
+	flex: auto;
+	height: 35px;
+	border: 1px solid #f6f6f6;
+	border-left: 0;
+	box-sizing: border-box;
+	position: relative;
 	outline: 0;
 	float: left;
-	margin: 2px 0px;
 	padding-right: 10px;
 	background-color: #FFF;
 }#browser-actions input#go{
 	position: relative;
-	height: 31px;
-	margin: 2px 0px;
+	height: 35px;
+	border: 1px solid #f6f6f6;
+	border-right: 0;
+	box-sizing: border-box;
 	width: 40px;
-	background-color: #FFF;
 	float: left;
-	border: 0;
 	outline: 0;
-}#browser-actions input#go svg{
-	
+	background: url(img/search.svg) no-repeat center;
+	background-color: #FFF;
+ 	background-size: 20px 20px;
+}#browser-actions #location-form{
+	-webkit-flex: 1;
+  	display: -webkit-flex;
+    webit-flex-direction: column;
 }
 
 
