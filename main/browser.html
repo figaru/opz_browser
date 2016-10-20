@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser-frame.css">
+    <!-- <link rel="stylesheet" href="browser.css"> -->
+    <script src="browser.js"></script>
+  <body>
+    <div id="browser-frame">
+        <div class="frame-tabs">
+          
+        </div>
+        <div class="frame-actions">
+          <div class="action">
+            <svg class="min" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 13H5v-2h14v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="action">
+            <svg class="max" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"/>
+            </svg>
+          </div>
+          <div class="action" id="frame-close">
+            <svg class="close" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+        </div>
+    </div>
+
+    <div id="browser-actions">
+      <button id="url-back" title="Go Back">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+            <path d="M0-.5h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button id="url-forward" title="Go Forward">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+            <path d="M0-.25h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button id="url-home" title="Go Home">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button id="url-reload" title="Reload">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+
+      <!-- URL LOCATION SEARCH -->
+      <form id="location-form">
+        <input id="go" type="submit" value="Go">
+        <input id="location" type="text" value="http://www.github.com/">
+      </form>
+
+    </div>
+
+    <div id="browser-webview">
+      <webview src="http://www.github.com/"></webview>
+
+      <div id="sad-webview">
+        <div id="sad-webview-icon">&#9762;</div>
+        <h2 id="crashed-label">Aw, Snap!</h2>
+        <h2 id="killed-label">He's Dead, Jim!</h2>
+
+        <p>Something went wrong while displaying this webpage.
+        To continue, reload or go to another page.</p>
+      </div>
+    </div>
+
+    <div id="browser-footer">
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div id="controls">
+
+      <button id="back" title="Go Back" disabled="true">&#9664;</button>
+      <button id="forward" title="Go Forward" disabled="true">&#9654;</button>
+      <button id="home" title="Go Home">&#8962;</button>
+      <button id="reload" title="Reload">&#10227;</button>
+
+      <form id="location-form">
+        <div id="center-column">
+          <input id="location" type="text" value="http://www.github.com/">
+        </div>
+        <input type="submit" value="Go">
+      </form>
+
+      <button id="zoom" title="Change Zoom">&#128270;</button>
+      <button id="find" title="Find in Page">&#128294;</button>
+
+    </div>
+
+    <div id="zoom-box">
+      <form id="zoom-form">
+        <input id="zoom-text" type="text">
+        <input type="submit" value="&#128270;">
+        <button id="zoom-in">&#10133;</button>
+        <button id="zoom-out">&#10134;</button>
+      </form>
+    </div>
+
+    <div id="find-box">
+      <form id="find-form">
+        <input id="find-text" type="text">
+        <div id="find-results"></div>
+        <input type="submit" style="position:absolute; visibility:hidden">
+        <button id="match-case">aA</button>
+        <button id="find-backward">&#60;</button>
+        <button id="find-forward">&#62;</button>
+      </form>
+    </div>
+
+    <webview src="http://www.github.com/" style="width:640px; height:480px"></webview>
+
+    <div id="sad-webview">
+      <div id="sad-webview-icon">&#9762;</div>
+      <h2 id="crashed-label">Aw, Snap!</h2>
+      <h2 id="killed-label">He's Dead, Jim!</h2>
+
+      <p>Something went wrong while displaying this webpage.
+      To continue, reload or go to another page.</p>
+    </div> -->
+  </body>
+</html>
