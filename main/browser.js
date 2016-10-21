@@ -22,6 +22,7 @@ onload = function() {
     addTab("http://github.com");
   },false);
 
+
   document.querySelector("#frame-close").addEventListener('click',function(){
     ipcRenderer.send('frame-action', 'close');
   },false);
