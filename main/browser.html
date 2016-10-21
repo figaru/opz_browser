@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
     <link rel="stylesheet" href="browser-frame.css">
     <!-- <link rel="stylesheet" href="browser.css"> -->
     <script src="browser.js"></script>
   <body>
     <div id="browser-frame">
         <div class="frame-tabs">
-          <div class="tab">
-            <div class="icon"><img src="https://assets-cdn.github.com/favicon.ico"></div>
-            <div class="title">GitHub</div>
+          <div id="tab-view">
+            <div class="tab">
+              <div class="icon"><img src="https://assets-cdn.github.com/favicon.ico"></div>
+              <div class="title">GitHub -  this is a test to test tabs ellipsis</div>
+            </div>
+          </div>
+          <div class="add" id="tab-add">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
           </div>
         </div>
         <div class="frame-actions">
@@ -69,7 +78,7 @@
     </div>
 
     <div id="browser-webview">
-      <webview src="http://www.github.com/" autosize="on"></webview>
+      
     </div>
 
     <div id="browser-footer">
