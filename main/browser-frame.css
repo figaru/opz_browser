@@ -20,21 +20,33 @@ body, html{
 		}.frame-tabs #tab-view .tab{
 			width: 200px;
 			height: 35px;
+			border-right: 1px solid #f6f6f6;
 			float: left;
-			background-color: #f6f6f6;
+			background-color: transparent;
 			cursor: pointer;
-			}#tab-view .tab .icon{
+			}.frame-tabs #tab-view .tab.active{
+				background-color: #f6f6f6;
+			}.frame-tabs #tab-view .tab.active:hover{
+				background-color: #f6f6f6;
+			}.frame-tabs #tab-view .tab:hover{
+				background-color: #d9d9d9;
+			}.tab .icon{
 				width: 35px;
 				height: 35px;
 				padding: 7px;
 				box-sizing: border-box;
 				float: left;
+				display: block;
 				position: relative;
 				}.tab .icon img{
 					width: 100%;
 					height: 100%;
-
-			}#tab-view .tab .title{
+				}.tab.loading > .icon .tab-loader{
+					display: block;
+				}.tab.loading > .icon img{
+					display: none;
+				}
+			.tab .title{
 				width: 165px;
 				height: 35px;
 				padding: 0px 7px;
@@ -174,4 +186,54 @@ body, html{
 	box-sizing: border-box;
 	position: absolute;
 	right: 2px;
+}#browser-webview webview.hide {
+    flex: 0 1 !important;
+    width: 0px !important;
+    height: 0px !important;
+  }
+
+
+/*----------------------------------TAB LOADER-----------------------------*/
+.tab-loader {
+	display: none;
+  margin: 0px auto;
+  font-size: 5px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  border-right: 3px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  border-left: 3px solid #666;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.tab-loader,
+.tab-loader:after {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

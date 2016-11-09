@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
     <link rel="stylesheet" href="browser-frame.css">
     <!-- <link rel="stylesheet" href="browser.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="browser.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
   <body>
     <div id="browser-frame">
         <div class="frame-tabs">
           <div id="tab-view">
-<!--             <div class="tab">
-              <div class="icon" id="tab-remove"><img src="https://assets-cdn.github.com/favicon.ico"></div>
+            <!-- <div class="tab loading">
+              <div class="icon" id="tab-remove"><div  class="tab-loader"></div><img src="https://assets-cdn.github.com/favicon.ico"></div>
               <div class="title">GitHub -  this is a test to test tabs ellipsis</div>
             </div> -->
           </div>
